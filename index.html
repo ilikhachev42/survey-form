@@ -2,10 +2,23 @@
 <html lang="eu">
   <head>
     <meta charset="utf-8">
-    <title>justkoi42 Survey Form</title>
+    <title>Booking form</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>justkoi42's Survey Form</h1>
+    <header>
+      <h1 id="title">Hotel booking form</h1>
+      <p id="description">Best hotels in Goa with special price from our partners!</p>
+    <header>
+    <form id="survey-form">
+      <label id="name-label" for="name">Name</label>
+      <input id="name" type="text" required="" placeholder="Enter your name">
+      <label id="name-tel" for="tel">What's Up number</label>
+      <input id="tel" type="tel">
+      <label id="email-label" for="email">Email</label>
+      <input id="email" type="email" required="">
+      <label id="number-label" for="number">Rooms</label>
+      <input id="number" type="number" min="1" max="5" placeholder="Up to 5 rooms">
+    </form>
   </body>
 </html>
