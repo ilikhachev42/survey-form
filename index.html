@@ -14,11 +14,38 @@
       <label id="name-label" for="name">Name</label>
       <input id="name" type="text" required="" placeholder="Enter your name">
       <label id="name-tel" for="tel">What's Up number</label>
-      <input id="tel" type="tel">
+      <input id="tel" type="tel" required="" placeholder="Enter your phone number">
       <label id="email-label" for="email">Email</label>
-      <input id="email" type="email" required="">
+      <input id="email" type="email" required="" placeholder="Enter your emal">
       <label id="number-label" for="number">Rooms</label>
       <input id="number" type="number" min="1" max="5" placeholder="Up to 5 rooms">
+      <label id="select" for="dropdown">District</label>
+      <select id="dropdown" name="district" required="">
+        <option disabled="" selected="" value="">Select an option</option>
+        <option value="arambol">Arambol</option>
+        <option value="mandrem">Mandrem</option>
+        <option value="morjim">Morjim</option>
+        <option value="querim">Querim</option>
+        </select>
+        <p>Do you need a transfer?</p>
+        <label id="radio" for="radio-yes">
+        <input id="radio-yes" type="radio" value="yes" name="transfer">
+        Yes</label>
+        <label id="radio" for="radio-no">
+        <input id="radio-no" type="radio" value="no" name="transfer">
+        No</label>
+        <p>Hotel number should include:</p>
+        <label id="checkbox" for="checkbox-pool">
+        <input id="checkbox-pool" type="checkbox" value="Pool">
+        Pool</label>
+        <label id="checkbox" for="checkbox-food">
+        <input id="checkbox-food" type="checkbox" value="Restourant">
+        Restourant</label>
+        <p>Any comments or suggestions?</p>
+        <textarea placeholder="Enter your comment here..."></textarea>
+        <div>
+        <button id="submit" type="submit">Submit</button>
+        </div>
     </form>
   </body>
 </html>
