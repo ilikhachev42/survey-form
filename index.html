@@ -1,60 +1,89 @@
-<!DOCKTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Booking form</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header>
-      <h1 id="title">Hotel booking form</h1>
-      <p id="description">Best hotels in Goa with special price from our partners!</p>
-    <header>
-    <form id="survey-form">
-      <label id="name-label" for="name">Name</label>
-      <br>
-      <input id="name" type="text" required="" placeholder="Enter your name">
-      <br>
-      <label id="name-tel" for="tel">What's Up number</label>
-      <br>
-      <input id="tel" type="tel" required="" placeholder="Enter your phone number">
-      <br>
-      <label id="email-label" for="email">Email</label>
-      <br>
-      <input id="email" type="email" required="" placeholder="Enter your emal">
-      <br>
-      <label id="number-label" for="number">Rooms</label>
-      <br>
-      <input id="number" type="number" min="1" max="5" placeholder="Up to 5 rooms">
-      <br>
-      <label id="select" for="dropdown">District</label>
-      <br>
-      <select id="dropdown" name="district" required="">
-        <option disabled="" selected="" value="">Select an option</option>
-        <option value="arambol">Arambol</option>
-        <option value="mandrem">Mandrem</option>
-        <option value="morjim">Morjim</option>
-        <option value="querim">Querim</option>
-        </select>
-        <p>Do you need a transfer?</p>
-        <label id="radio" for="radio-yes">
-        <input id="radio-yes" type="radio" value="yes" name="transfer">
-        Yes</label>
-        <label id="radio" for="radio-no">
-        <input id="radio-no" type="radio" value="no" name="transfer">
-        No</label>
-        <p>Hotel number should include:</p>
-        <label id="checkbox" for="checkbox-pool">
-        <input id="checkbox-pool" type="checkbox" value="Pool">
-        Pool</label>
-        <label id="checkbox" for="checkbox-food">
-        <input id="checkbox-food" type="checkbox" value="Restourant">
-        Restourant</label>
-        <p>Any comments or suggestions?</p>
-        <textarea placeholder="Enter your comment here..."></textarea>
-        <div>
-        <button id="submit" type="submit">Submit</button>
-        </div>
-    </form>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>justkoi42 Survey Form</title>
+</head>
+<body>
+  <header>
+    <h1 id="title">justkoi42 Survey Form</h1>
+    <p id="description">Thank you for taking your time to help me improve my skills!</p>
+  </header>
+  <form id="survey-form">
+    <div class="form-div">
+      <label id="name-label" for="name">Name</lebel>
+      <input type="text" id="name" required="" placeholder="Enter your name">
+    </div>
+    <div class="form-div">
+      <label id="email-label" for="email">Email</lebel>
+      <input type="email" id="email" required="" placeholder="Enter your email">
+    </div>
+    <div class="form-div">
+      <label id="number-label" for="number">
+        Age
+        <span class="optional">(optional)</span>
+      </label>
+      <input type="number" id="number" name="age" min="14" max="99" placeholder="Age(is not required)">
+    </div>
+    <div class="form-div">
+      <p>How do you grade the work is done?</p>
+      <select name="grade" id="dropdown" required="">
+        <option value="" disabled="" selected="">Choose the grade</option>
+        <option value="5">Well done</option>
+        <option value="4">Good job</option>
+        <option value="3">Decent</option>
+        <option value="2">Bad</option>
+        <option value="1">Disaster</option>
+      </select>
+    </div>
+    <div class="form-div">
+      <p>Would you work with me again?</p>
+      <label for="positive">
+        <input id="positive" type="radio" class="input-radio" name="user-opinion" value="I-think-so" checked="">
+        I think so
+      </label>
+      <label for="neutral">
+        <input id="neutral" type="radio" class="input-radio" name="user-opinion" value="Maybe" checked="">
+        Maybe
+      </label>
+      <label for="negative">
+        <input id="negative" type="radio" class="input-radio" name="user-opinion" value="Dont-think-so" checked="">
+        Don't think so
+      </label>
+    </div>
+    <div class="form-div">
+      <p>What would you improve in my work?</p>
+      <label for="price">
+        <input type="checkbox" id="price" class="input-checkbox" value="price-politics">
+        Price politics
+      </label>
+      <label for="time">
+        <input type="checkbox" id="time" class="input-checkbox" value="work-time">
+        Work time
+      </label>
+      <label for="communication">
+        <input type="checkbox" id="communication" class="input-checkbox" value="communication">
+        Communication
+      </label>
+      <label for="other">
+        <input type="checkbox" id="other" class="input-checkbox" value="other">
+        Other
+        <span class="other">(write in the comments below)</span>
+      </label>
+    </div>
+    <div class="form-div">
+      <p>Any comments or suggestion?</p>
+      <textarea name="textfield" id="comments" class="input-textarea" placeholder="Enter your comment here..."></textarea>
+    </div>
+    <div class="form-div">
+      <!--Add alert for submit button later-->
+      <button type="submit" id="submit" class="submit-button" onclick="">
+        Submit
+      </button>
+    </div>
+  </form>
+</body>
 </html>
