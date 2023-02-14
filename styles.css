@@ -4,23 +4,94 @@
     --border-color: #f36138;
 }
 
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
 body {
-    justify-content: center;
-    width: 100%;
-    height: 100%;
     background-color: var(--background-color);
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 header {
-
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 10px;
 }
 
-form {
-    justify-content: center;
-    background-color: #4d706a;
+header h1 {
+    color: var(--border-color);
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px var(--font-color);
 }
 
-h1, p {
-color: var(--font-color);
+header p {
+    color: var(--font-color);
+    margin-bottom: 20px;
+    font-style: italic;
 }
 
+.form { 
+    background-color: var(--border-color);
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: static;
+    align-items: center;
+    padding: 20px;
+    width: 500px;
+    margin: auto;
+    opacity: 90%;
+}
+
+.form-div {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+label {
+    display: block;
+}
+
+input {
+    display: block;
+    margin-top: 10px;
+}
+
+.input-radio {
+    display: inline-block;
+}
+
+.input-checkbox {
+    display: inline-block;
+}
+
+#name, 
+#email, 
+#number {
+    width: 100%;
+    height: 1.75em;
+}
+
+select {
+    width: 100%;
+    height: 1.75rem;
+    margin-top: 10px;
+}
+
+.input-textarea {
+    margin-top: 10px;
+    height: 100px;
+    width: 100%;
+}
+
+.submit-button {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: 5px;
+}
