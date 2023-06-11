@@ -4,21 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
-  <title>justkoi42 Survey Form</title>
+  <title>ilikhachev42 Survey Form</title>
 </head>
 <body>
   <header>
-    <h1 id="title">@justkoi42 Survey Form</h1>
+    <h1 id="title">@ilikhachev42 Survey Form</h1>
     <p id="description">Thank you for taking your time to help me improve my skills!</p>
   </header>
   <form id="survey-form" class="form">
     <div class="form-div">
-      <label id="name-label" for="name">Name</lebel>
+      <label id="name-label" for="name">Name</label>
       <input type="text" id="name" required="" placeholder="Enter your name">
     </div>
     <div class="form-div">
-      <label id="email-label" for="email">Email</lebel>
+      <label id="email-label" for="email">Email</label>
       <input type="email" id="email" required="" placeholder="Enter your email">
     </div>
     <div class="form-div">
@@ -43,7 +44,7 @@
       <p>Would you work with me again?</p>
       <label for="positive">
         <input id="positive" type="radio" class="input-radio" name="user-opinion" value="I-think-so" checked="">
-        I think so
+        Definitely yes!
       </label>
       <label for="neutral">
         <input id="neutral" type="radio" class="input-radio" name="user-opinion" value="Maybe" checked="">
@@ -71,7 +72,7 @@
       <label for="other">
         <input type="checkbox" id="other" class="input-checkbox" value="other">
         Other
-        <span class="other">(write in the comments below)</span>
+        <span class="other">(write in comments)</span>
       </label>
     </div>
     <div class="form-div">
@@ -79,7 +80,6 @@
       <textarea name="textfield" id="comments" class="input-textarea" placeholder="Enter your comment here..."></textarea>
     </div>
     <div class="form-div">
-      <!--Add alert for submit button later-->
       <button type="submit" id="submit" class="submit-button" onclick="">
         Submit
       </button>
