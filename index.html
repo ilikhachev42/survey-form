@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
   <title>ilikhachev42 Survey Form</title>
@@ -15,22 +18,22 @@
   </header>
   <form id="survey-form" class="form">
     <div class="form-div">
-      <label id="name-label" for="name">Name</label>
+      <label id="name-label" for="name" class="big-text">Name</label>
       <input type="text" id="name" required="" placeholder="Enter your name">
     </div>
     <div class="form-div">
-      <label id="email-label" for="email">Email</label>
+      <label id="email-label" for="email" class="big-text">Email</label>
       <input type="email" id="email" required="" placeholder="Enter your email">
     </div>
     <div class="form-div">
-      <label id="number-label" for="number">
+      <label id="number-label" for="number" class="big-text">
         Age
         <span class="optional">(optional)</span>
       </label>
       <input type="number" id="number" name="age" min="14" max="99" placeholder="Age(is not required)">
     </div>
     <div class="form-div">
-      <p>How do you grade the work is done?</p>
+      <p class="big-text">How do you grade the work is done?</p>
       <select name="grade" id="dropdown" required="">
         <option value="" disabled="" selected="">Choose the grade</option>
         <option value="5">Well done</option>
@@ -41,9 +44,9 @@
       </select>
     </div>
     <div class="form-div">
-      <p>Would you work with me again?</p>
+      <p class="big-text">Would you work with me again?</p>
       <label for="positive">
-        <input id="positive" type="radio" class="input-radio" name="user-opinion" value="I-think-so" checked="">
+        <input id="positive" type="radio" class="input-radio" name="user-opinion" value="I-think-so" checked="true">
         Definitely yes!
       </label>
       <label for="neutral">
@@ -56,7 +59,7 @@
       </label>
     </div>
     <div class="form-div">
-      <p>What would you improve in my work?</p>
+      <p class="big-text">What would you improve in my work?</p>
       <label for="price">
         <input type="checkbox" id="price" class="input-checkbox" value="price-politics">
         Price politics
@@ -76,7 +79,7 @@
       </label>
     </div>
     <div class="form-div">
-      <p>Any comments or suggestion?</p>
+      <p class="big-text">Any comments or suggestion?</p>
       <textarea name="textfield" id="comments" class="input-textarea" placeholder="Enter your comment here..."></textarea>
     </div>
     <div class="form-div">
