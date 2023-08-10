@@ -1,12 +1,11 @@
-@font-face {
-  font-family: 'saxMono';
-  src: local('saxMono'), url('./fonts/saxMono/saxMono.woff2'), format('woff2');
-  }
+/* General styles for HD, Full HD monitors and etc... */
 
 @font-face {
-  font-family: 'Lato';
-  src: local('Lato'), url('./fonts/Lato/Lato-Regular.ttf'), format('truetype');
-}
+  font-family: 'saxMono';
+  src: local('saxMono'), url('./fonts/saxMono/saxMono.woff2'), format('woff2'),
+	src: local('saxMono'), url('./fonts/saxMono/saxMono.woff'), format('woff'),
+	src: local('saxMono'), url('./fonts/saxMono/saxMono.ttf'), format('truetype');
+  }
 
 :root {
 	--main-bg: #f5f6f7;
@@ -20,9 +19,8 @@
 
 body {
 	background-color: var(--main-bg);
-	font-family: 'saxMono';
+	font-family: 'saxMono', 'Roboto Mono', monospace;
 	font-size: 1.2em;
-	font-weight: 400;
 }
 
 header {
@@ -35,6 +33,21 @@ h1 {
 	text-shadow: 2px 2px var(--form-bg);
 }
 
+h1::selection,
+p::selection,
+form label::selection
+{
+	color: var(--main-bg);
+	background-color: var(--font-and-border);
+}
+
+input::selection,
+textarea::selection
+{
+	color: var(--font-and-border);
+	background-color: var(--form-bg);
+}
+
 #description {
 	margin-top: 10px;
 	font-style: italic;
@@ -44,18 +57,49 @@ form {
 	background-color: var(--form-bg);
 	color: var(--font-and-border);
 	width: 720px;
-	margin: 0 auto;
+	margin: 25px auto 25px auto;
 	padding: 40px;
 	border: 3px solid var(--font-and-border);
 }
 
-.form-div {
+.big-text {
+	font-size: 1.25em;
+}
+
+.form-div:nth-of-type(5),
+.form-div:nth-of-type(6) 
+{
+	margin-bottom: 10px;
+}
+
+.form-div p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.big-text p:nth-of-type(1) {
+	margin-bottom: 0px !important;
+}
+
+select {
+	width: 100%;
+	margin-top: -10px;
+	margin-bottom: 10px;
 }
 
 #submit {
 	width: 100%;
 	height: 50px;
-	margin-top: 40px;
+	margin-top: 10px;
+	border: 3px solid var(--font-and-border);
+	background-color: var(--form-bg);
+}
+
+#submit:hover {
+	border: 3px solid var(--form-bg);
+	background-color: var(--font-and-border);
+	color: #fff;
+	cursor: pointer;
 }
 
 label {
@@ -68,5 +112,70 @@ input[type="number"]
 {
 	background-color: var(--main-bg);
 	width: 100%;
+	margin-bottom: 10px;
 }
 
+textarea {
+	width: 100%;
+	height: 120px;
+	background-color: var(--main-bg);
+	resize: none;
+}
+
+input:focus,
+textarea:focus
+{
+	outline: none;
+}
+
+input[type="radio"],
+input[type="checkbox"]
+{
+	accent-color: #1b1b32;
+}
+
+/* Styles for tablets */
+
+@media (min-width: 481px) and (max-width: 768px) {
+	body {
+		font-size: 1em;
+	}
+
+	header {
+		width: 95%;
+		margin: auto;
+		padding: 0 10px;
+	}
+
+	header h1 {
+		font-size: 1.75em;
+	}
+
+	form {
+		width: 95%;
+		margin: 10px auto 10px auto;
+	}
+}
+
+/* Styles for phones */
+
+@media (min-width: 320px) and (max-width: 480px) {
+	body {
+		font-size: 1em;	
+	}
+	
+	header {
+		width: 100%;
+		padding: 0 10px;	
+	}
+
+	header h1 {
+		font-size: 1.5em;
+	}
+
+	form {
+		width: 100%;	
+		margin: 5px auto 5px auto;
+		padding: 20px;
+	}
+}
